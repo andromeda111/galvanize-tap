@@ -180,13 +180,13 @@ appendForm () {
     console.log('making post request');
     console.log(scoreObj);
     $.ajax({
-      url: 'http://localhost:3000/score',
+      url: 'https://galvanize-tap.herokuapp.com/score',
       method: 'POST',
       data: scoreObj
     }).then(result => {
       playerScore = result
       $.ajax({
-        url: 'http://localhost:3000/score',
+        url: 'https://galvanize-tap.herokuapp.com/score',
         method: 'GET',
         json: true
       }).then(data => {

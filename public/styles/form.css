@@ -1,0 +1,64 @@
+form {
+  border-top: 3px dashed orange;
+  margin-top: 1rem;
+}
+
+form p.title {
+  margin-top: 1rem;
+}
+
+.input-field label {
+ color: white;
+}
+
+.input-field input[type=text]:focus + label {
+ color: orange;
+}
+
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid orange;
+ box-shadow: 0 1px 0 0 orange;
+}
+
+.input-field input[type=text].valid {
+ border-bottom: 1px solid #263238;
+ box-shadow: 0 1px 0 0 #263238;
+}
+
+.input-field input[type=text].invalid {
+ border-bottom: 1px solid #263238;
+ box-shadow: 0 1px 0 0 #263238;
+}
+
+.input-field .prefix.active {
+ color: #263238;
+}
+
+#name {
+  color: white;
+}
+
+.drop-font {
+  font-size: 0.7rem;
+}
+
+.alert-box {
+	padding: 2px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.weekend {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    display: none;
+}
+
+.break {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    display: none;
+}

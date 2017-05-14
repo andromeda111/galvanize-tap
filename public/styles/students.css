@@ -1,0 +1,147 @@
+.gif img {
+  max-width: 175px;
+}
+
+.student-sprite {
+  background-image: url('../images/piranha.png');
+  background-repeat: no-repeat;
+  margin: 1rem auto;
+  height: 28px;
+  width: 28px;
+}
+
+.flip {
+  transform: scaleX(-1);
+}
+
+/* first row */
+
+.normal {
+  animation: animate-normal 1.2s infinite linear;
+  animation-timing-function: steps(1, end);
+  background-position: -6px -36px;
+}
+
+@keyframes animate-normal {
+  0% { background-position: -6px -36px; }
+  35% { background-position: -34px -36px; }
+  60% { background-position: -60px -36px; }
+  90% { background-position: -6px -36px; }
+}
+
+.lilac {
+  animation: animate-lilac 1.2s infinite linear;
+  animation-timing-function: steps(1, end);
+  background-position: -134px -36px;
+}
+
+@keyframes animate-lilac {
+  0% { background-position: -134px -36px; }
+  35% { background-position: -162px -36px; }
+  60% { background-position: -188px -36px; }
+  90% { background-position: -134px -36px; }
+}
+
+.ruby {
+  animation: animate-ruby 1.2s infinite linear;
+  animation-timing-function: steps(1, end);
+  background-position: -256px -36px;
+}
+
+@keyframes animate-ruby {
+  0% { background-position: -256px -36px; }
+  35% { background-position: -284px -36px; }
+  60% { background-position: -310px -36px; }
+  90% { background-position: -256px -36px; }
+}
+
+/* second row */
+
+.forest {
+  animation: animate-forest 1.2s infinite linear;
+  animation-timing-function: steps(1, end);
+  background-position: -6px -210px;
+}
+
+@keyframes animate-forest {
+  0% { background-position: -6px -210px; }
+  35% { background-position: -34px -210px; }
+  60% { background-position: -60px -210px; }
+  90% { background-position: -6px -210px; }
+}
+
+.golden {
+  animation: animate-golden 1.2s infinite linear;
+  animation-timing-function: steps(1, end);
+  background-position: -130px -210px;
+}
+
+@keyframes animate-golden {
+  0% { background-position: -130px -210px; }
+  35% { background-position: -158px -210px; }
+  60% { background-position: -184px -210px; }
+  90% { background-position: -130px -210px; }
+}
+
+.imperial {
+  animation: animate-imperial 1.2s infinite linear;
+  animation-timing-function: steps(1, end);
+  background-position: -260px -210px;
+}
+
+@keyframes animate-imperial {
+  0% { background-position: -260px -210px; }
+  35% { background-position: -288px -210px; }
+  60% { background-position: -314px -210px; }
+  90% { background-position: -260px -210px; }
+}
+
+/* third row */
+
+.aqua {
+  animation: animate-aqua 1.2s infinite linear;
+  animation-timing-function: steps(1, end);
+  background-position: -8px -348px;
+}
+
+@keyframes animate-aqua {
+  0% { background-position: -8px -348px; }
+  35% { background-position: -36px -348px; }
+  60% { background-position: -62px -348px; }
+  90% { background-position: -8px -348px; }
+}
+
+.spotted {
+  animation: animate-spotted 1.2s infinite linear;
+  animation-timing-function: steps(1, end);
+  background-position: -138px -348px;
+}
+
+@keyframes animate-spotted {
+  0% { background-position: -138px -348px; }
+  35% { background-position: -166px -348px; }
+  60% { background-position: -192px -348px; }
+  90% { background-position: -138px -348px; }
+}
+
+.skeleton {
+  animation: animate-skeleton 1.2s infinite linear;
+  animation-timing-function: steps(1, end);
+  background-position: -268px -348px;
+}
+
+@keyframes animate-skeleton {
+  0% { background-position: -268px -348px; }
+  35% { background-position: -296px -348px; }
+  60% { background-position: -322px -348px; }
+  90% { background-position: -268px -348px; }
+}
+
+.dead .student-sprite {
+  animation: none;
+  filter: grayscale(100%);
+}
+
+.dead .card-title {
+  text-decoration: line-through;
+}

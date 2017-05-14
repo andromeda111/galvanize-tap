@@ -1,0 +1,69 @@
+html {
+  background-image: url('../images/topography.png');
+  font-size: 18px;
+}
+
+main.row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: stretch;
+  margin: 0;
+  min-height: 100vh;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.student {
+  display: inline-block;
+  margin: 1rem 2%;
+  padding: 1rem 0;
+  width: 29%;
+}
+
+.water .btn-floating {
+  line-height: 1.2rem;
+  height: 1.2rem;
+  margin: 0 0.1rem;
+  width: 1.2rem;
+}
+
+.water .btn-floating i {
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.water-count img {
+  margin: 0 2px;
+}
+
+.water img {
+  margin: 0 2px;
+}
+
+#aside {
+  background-color: #3D3D3D;
+}
+
+.grayscale {-webkit-filter: grayscale(100%); filter: grayscale(100%);}
+
+.gameover {
+  margin: auto;
+}
+
+.end-score {
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+}
+
+td {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+th {
+  text-align: center;
+}

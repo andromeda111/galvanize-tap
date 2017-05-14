@@ -1,6 +1,6 @@
 form {
   border-top: 3px dashed orange;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 form p.title {
@@ -61,4 +61,8 @@ form p.title {
     background-color: #dff0d8;
     border-color: #d6e9c6;
     display: none;
+}
+
+#view-scores {
+  font-size: 0.8rem;
 }

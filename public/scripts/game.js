@@ -21,6 +21,7 @@ class GameRender {
       this.appendForm()
       this.initForm()
       this.initStart()
+      this.initViewScores()
       this.initialized = true
     }
     this.addStudents()
@@ -67,6 +68,8 @@ class GameRender {
       class="btn blue-grey darken-1">
       <i class="material-icons right">play_arrow</i> Start
     </button>
+    <br>
+    <a id="view-scores" href="/">View High Scores</a>
   </div>`)
 
   this.$statsAside.append($stats)
@@ -122,6 +125,33 @@ appendForm () {
     })
   }
 
+  initViewScores() {
+    $('#view-scores').on('click', (e) => {
+      e.preventDefault()
+      $('#start').attr('disabled', true)
+      this.viewScores()
+    })
+  }
+
+  viewScores() {
+    $('main section').empty()
+    $('main section').append(`<div class="gameover"><h2 class="orange-text">Game Over</h2></div><div class="end-score"><a href="/">Play Again</a><br><p>Top 10 High Scores:</p><table><col width="50%"><col width="50%"><tr><th>Name</th><th>Score</th></tr></table><table class="score-list"></table></div>`)
+
+    // Ajax Call for Database Score Info Here
+    var scoreArray = []
+      $.ajax({
+        url: 'https://galvanize-tap.herokuapp.com/score',
+        method: 'GET',
+        json: true
+      }).then(data => {
+        scoreArray = data
+        $('.score-list').empty()
+        scoreArray.forEach(el => {
+          $('.score-list').append(`<tr><td width="50%">${el.name}</td><td width="50%">${el.score}</td></tr>`)
+        })
+      })
+    }
+
   // Set Stuff - below here
 
   setScore() {
@@ -164,6 +194,7 @@ appendForm () {
 
   // Game Over
   gameOver() {
+    $('.enroll-btn').attr('disabled', true)
     $('main section').empty()
     $('main section').append(`<div class="gameover"><h2 class="orange-text">Game Over</h2></div><div class="end-score"><a href="/">Play Again</a><br><p>Top 10 High Scores:</p><table><col width="50%"><col width="50%"><tr><th>Name</th><th>Score</th></tr></table><table class="score-list"></table></div>`)
 
